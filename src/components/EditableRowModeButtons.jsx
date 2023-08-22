@@ -1,15 +1,15 @@
 
 
-const EditableRowModeButtons = ({isEditing}) => {
+const EditableRowModeButtons = ({isEditing, onEditClick, onSaveClick, onDeleteClick}) => {
 
   return isEditing ? (
     <td>
-        <button>Save</button>
+        <button onClick={onSaveClick}>Save</button>
     </td>
   ) : (
     <td>
-        <button>Delete</button>
-        <button>Edit</button>
+        <button onClick={onDeleteClick}>Delete</button>
+        <button onClick={onEditClick}>Edit</button>
     </td>
   )
 }
